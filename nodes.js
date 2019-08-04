@@ -13,14 +13,21 @@ class Nodes {
     }
     display() {
         strokeWeight(1)
+        stroke(1, 1, 1);
         fill(this.color)
-        ellipse(this.x, this.y, 25, 25)
+        ellipse(this.x, this.y, 40, 40)
         fill('#fc0303')
+        textSize(15)
         text(this.val, this.x, this.y)
+    }
+    highlight() {
+        noFill()
+        strokeWeight(1)
+        ellipse(this.x, this.y, 50, 50)
     }
     isPressed() {
         let distance = dist(mouseX, mouseY, this.x, this.y)
-        if (distance < 12.5)
+        if (distance < 20)
             return true;
         else
             return false;

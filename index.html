@@ -6,10 +6,124 @@
         <script src="nodes.js"></script>
         <script src="edges.js"></script>
         <script src="model.js"></script>
+        <script src="Dijkstra.js"></script>
         <script src="view.js"></script>
     </head>
 
     <body>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                background-color: rgb(255, 8, 8);
+            }
+
+            div {
+                /* border: 1px solid black; */
+                padding: 10px 15px 10px;
+                background-color: rgb(236, 49, 49);
+                text-align: center;
+                /* position: absolute;
+                right: 0px; */
+            }
+
+            .source {
+                position: fixed;
+                left: 2%;
+                top: 90%;
+
+            }
+
+            .sel {
+                position: fixed;
+                left: 8%;
+                top: 90%;
+                background-color: rgb(52, 49, 236);
+                padding: 10px 15px 10px;
+            }
+
+            .texDest {
+                position: fixed;
+                left: 18%;
+                top: 90%;
+            }
+
+            .calc {
+                position: fixed;
+                left: 40%;
+                top: 90%;
+            }
+
+            .selDest {
+                position: fixed;
+                left: 26%;
+                top: 90%;
+                padding: 10px 15px 10px;
+                background-color: rgb(52, 49, 236);
+            }
+
+            .button {
+                background-color: rgb(149, 218, 151);
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: grid;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            .button:hover {
+                background-color: rgb(135, 76, 175);
+                /* Green */
+                color: white;
+            }
+
+            .butt:hover {
+                background-color: rgb(135, 76, 175);
+                /* Green */
+                color: white;
+            }
+
+            .butt {
+                background-color: rgb(44, 97, 46);
+                border: none;
+                color: white;
+                padding: 15px 28px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            input {
+                background-color: rgb(149, 218, 151);
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: text;
+                box-shadow: 0 15px 20px rgba(79, 167, 38, 0.212);
+            }
+
+            input[type=number]:focus {
+                background-color: rgb(174, 167, 177);
+            }
+
+            input[type=text]:focus {
+                background-color: rgb(174, 167, 177);
+            }
+        </style>
 
     </body>
 

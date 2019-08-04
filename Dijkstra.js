@@ -156,7 +156,7 @@ class Dijkstra {
         // console.log(this.shortestPath)
         // console.log(this.rejected)
         let now = this.destination
-        while (now !== this.source) {
+        while (now !== this.source && now !== null) {
             this.shortestPath.push({ "vertex": now, "weight": this.distances[now] })
             console.log(this.shortestPath)
             now = this.prev[now]

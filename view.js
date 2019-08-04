@@ -100,8 +100,11 @@ function calculate() {
     console.log(dijkstra.getShortestPath())
     msg = `Shortest Path:${handleShortestPath(dijkstra.getShortestPath())}`
     Dsrc = parseInt(sel.value())
-    modeDijkStra = true
-    Loop(dijkstra.getShortestPath().length - 1)
+
+    if (dijkstra.getShortestPath()[dijkstra.getShortestPath().length - 1]["weight"] !== Infinity) {
+        modeDijkStra = true
+        Loop(dijkstra.getShortestPath().length - 1)
+    }
     console.log(modeDijkStra)
     showShort.html(msg)
 }
@@ -110,8 +113,6 @@ function animateDijkstra(vertex) {
         Dsrc = Ddest
     console.log(vertex)
     Ddest = vertex["vertex"]
-    // console.log("Dsrc:", Dsrc)
-    console.log("DDesat :", Ddest)
     redraw()
 }
 function handleShortestPath(shortestPath) {
@@ -156,6 +157,7 @@ function draw() {
         }
         if (edges.length != 0) {
             for (var edge of edges) {
+                console.log(edge.getSource().getX(), edge.getSource().getY(), edge.getDest().getX(), edge.getDest().getY())
                 edge.display()
                 graphs.showVertices()
             }

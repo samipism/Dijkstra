@@ -16,6 +16,8 @@ class Edges {
     display() {
         strokeWeight(4)
         stroke(1, 1, 1);
+        console.log("Slope : ", this.slope)
+        let tempSlope = this.slope
         // console.log(20 * Math.sin(this.slope), 20 * Math.cos(this.slope), this.slope * (180 / Math.PI))
         if (this.slope < 0) {
             if ((parseFloat(this.dest.getY()) - parseFloat(this.src.getY())) > 0)
@@ -33,7 +35,7 @@ class Edges {
         fill(0, 102, 153);
         strokeWeight(0)
         text(this.weight, this.midX - 20, this.midY - 20)
-
+        this.slope = tempSlope
     }
     highlight() {
         strokeWeight(4)
